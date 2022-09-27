@@ -1,0 +1,190 @@
+$PrimaryColor: #03314b;
+
+@font-face {
+  font-family: "light";
+  src: url("../fonts/Cairo-Light.ttf");
+}
+
+@font-face {
+  font-family: "regular";
+  src: url("../fonts/Cairo-Regular.ttf");
+}
+
+@font-face {
+  font-family: "semibold";
+  src: url("../fonts/Cairo-SemiBold.ttf");
+}
+
+@font-face {
+  font-family: "bold";
+  src: url("../fonts/Cairo-Bold.ttf");
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+.login {
+  background: $PrimaryColor;
+  height: 100vh;
+  .container-fluid {
+    height: 100%;
+    .row {
+      height: 100%;
+    }
+  }
+}
+
+.logo {
+  border-radius: 100%;
+  border: 2px;
+  height: 130px;
+  margin-bottom: 1rem;
+}
+.lo {
+  font-size: 30px;
+  text-align: center;
+  color: #fff;
+}
+.box {
+  text-align: center;
+  display: block;
+}
+
+.box input[type="email"],
+.box input[type="password"] {
+  border: 0;
+  background: none;
+  display: block;
+  margin: 20px auto;
+  text-align: center;
+  border: 2px solid #038ea7;
+  color: #fff;
+  padding: 14px 10px;
+  width: 350px;
+  outline: none;
+  border-radius: 24px;
+  transition: 0.25s;
+  &::placeholder {
+    color: rgb(231, 231, 231);
+  }
+}
+
+.box input[type="email"]:focus,
+.box input[type="password"]:focus {
+  width: 430px;
+  border-color: #02509e;
+}
+
+#log {
+  border: 0;
+  background: none;
+  display: block;
+  margin: 20px auto;
+  text-align: center;
+  border: 2px solid #02509e;
+  padding: 14px 10px;
+  width: 150px;
+  outline: none;
+  border-radius: 24px;
+  transition: 0.25s;
+  color: rgb(231, 231, 231);
+  &::placeholder {
+    color: rgb(231, 231, 231);
+  }
+}
+
+#log:hover {
+  border-color: #038ea7;
+  color: #038ea7;
+  width: 180px;
+}
+#rr {
+  lottie-player {
+    width: 500px;
+    height: 500px;
+    display: block;
+    margin: 0 auto;
+  }
+}
+
+#rocket {
+  animation: fly 6s infinite ease-in-out;
+}
+#shadow {
+  animation: fly 6s infinite linear;
+}
+
+@keyframes fly {
+  from {
+    transform: rotateZ(0deg);
+  }
+  to {
+    transform: scalex(1.1);
+  }
+}
+
+.navbar {
+  .navbar-brand {
+    img {
+      width: 80px;
+    }
+  }
+  .navbar-collapse {
+    .navbar-nav {
+      justify-content: space-between;
+      width: 100%;
+      .nav-item {
+        .nav-link {
+          margin-bottom: 0;
+          font-family: "semibold";
+        }
+      }
+    }
+  }
+}
+
+.cources {
+  padding: 2rem 0;
+  position: relative;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  .card_cource {
+    box-shadow: -5px 10px 30px rgba(0, 0, 0, 0.16);
+    border: 1px solid rgb(163, 163, 163);
+    background-color: #fff;
+    margin-top: 1rem;
+    text-decoration: none;
+    border-radius: 10px;
+    display: block;
+    img {
+      width: 100%;
+      height: 250px;
+      border-radius: 10px 10px 0 0;
+    }
+    .description_card {
+      padding: 1rem;
+      .name {
+        font-family: "semibold";
+        color: $PrimaryColor;
+      }
+      .instractor {
+        font-family: "semibold";
+        color: $PrimaryColor;
+      }
+      .description {
+        margin-bottom: 0;
+        font-family: "regular";
+        font-size: 0.9rem;
+        color: #000;
+      }
+    }
+  }
+}
+
+@import "./navBar.scss";
+@import "./footer.scss";
+
+@import "./_responsive.scss";

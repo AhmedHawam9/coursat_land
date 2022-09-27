@@ -1,0 +1,13 @@
+/* ======= Tablet ======= */
+@media only screen and (max-width: 991.98px) {
+    .login {
+        padding: 3rem 0;
+        .container-fluid {
+            .row {
+                height: unset !important;
+                flex-direction: column-reverse;
+            }
+        }
+    }
+}
+/* ======= Tablet ======= */
