@@ -104,10 +104,6 @@ document.addEventListener("keydown", (e) => {
   }
 });
 
-/*
-NoPrint.js V1.0
-*/
-
 //=========== Close inspect =============
 document.addEventListener("contextmenu", (event) => event.preventDefault());
 document.onkeydown = function (e) {
