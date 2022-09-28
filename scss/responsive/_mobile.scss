@@ -4,5 +4,18 @@
         width: 350px;
         height: 350px;
     }
+    .aside {
+        height: fit-content;
+    }
+    .single_cource {
+        .video_lesson {
+            .number {
+                font-size: 4rem;
+            }
+            video {
+                height: 250px;
+            }
+        }
+    }
 }
 /* ======= Mobile ======= */
