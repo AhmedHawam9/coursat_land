@@ -24,7 +24,15 @@ $PrimaryColor: #03314b;
   margin: 0;
   padding: 0;
 }
+@media print {
+ 
+  html,
+  body {
 
+      /* Hide the whole page */
+      display: none;
+  }
+}
 @import "./auth.scss";
 
 .cources {
@@ -78,6 +86,7 @@ $PrimaryColor: #03314b;
     video {
       width: 100%;
       height: 500px;
+      max-height: 100vh;
     }
     video::-webkit-media-controls-fullscreen-button {
       display: none !important;
@@ -91,9 +100,30 @@ $PrimaryColor: #03314b;
       font-size: 10rem;
       color: #fff;
       text-shadow: 0 0 3px $PrimaryColor, 0 0 5px $PrimaryColor;
-      z-index: 99;
+      z-index: 0;
       margin-bottom: 0
     }
+  }
+  .download_btn {
+    background-color: #03314b;
+    color: #fff;
+    font-family: "semibold";
+    font-size: 1rem;
+    padding: .75rem 2rem;
+    margin-top: 1rem;
+    transition: .7s ease-in-out;
+    &:hover {
+      background-color: transparent;
+      color: $PrimaryColor;
+      border: 1px solid $PrimaryColor;
+      transition: .7s ease-in-out;
+    }
+  }
+}
+
+@media only screen and (min-width: 100vw) {
+  body {
+    display: none;
   }
 }
 
