@@ -138,11 +138,11 @@ document.addEventListener("keypress", () => {
 //=========== Close inspect =============
 
 // an alternative structure to check individual matches
-if (
-  navigator.userAgent.match(/Android/i) ||
-  navigator.userAgent.match(/iPhone/i)
-  ) {
-  console.log("test")
-  // toBlur();
-  // making individual checks
-}
+// if (
+//   navigator.userAgent.match(/Android/i) ||
+//   navigator.userAgent.match(/iPhone/i)
+//   ) {
+//   console.log("test")
+//   toBlur();
+//   // making individual checks
+// }
