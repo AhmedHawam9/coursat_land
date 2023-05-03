@@ -1,11 +1,10 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html lang="en">
 <head>
   <title>Bitmovin Player Demo</title>
   <meta charset="UTF-8"/>
   <meta http-equiv="X-UA-Compatible" content="text/html; charset=utf-8" />
 
-  <!-- Bitmovin Player -->
   <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/bitmovin-player@8/bitmovinplayer.js"></script>
 
   <style>
@@ -44,6 +43,55 @@
       playready: {
         LA_URL: 'https://test.playready.microsoft.com/service/rightsmanager.asmx?PlayRight=1&ContentKey=EAtsIJQPd5pFiRUrV9Layw=='
       }
+    },
+  };
+
+  var player = new bitmovin.player.Player(document.getElementById('player'), conf);
+  player.load(source);
+</script>
+
+</body>
+</html> -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bitmovin Player Demo</title>
+  <meta charset="UTF-8"/>
+  <meta http-equiv="X-UA-Compatible" content="text/html; charset=utf-8" />
+
+  <!-- Bitmovin Player -->
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/bitmovin-player@8/bitmovinplayer.js"></script>
+
+  <style>
+    .player-wrapper {
+      width: 90%;
+      margin: 20px auto;
+      box-shadow: 0 0 30px rgba(0,0,0,0.7);
+    }
+  </style>
+</head>
+<body>
+<div class="player-wrapper">
+  <div id="player"></div>
+</div>
+
+<script type="text/javascript">
+  var conf = {
+    key: 'ff76a5f5-02cf-4b31-908d-d7ec9de21e44',
+    analytics: {
+      key: '3fb4f675-9b4d-45cd-adb8-8941fcf74814',
+      title: 'test',
+      videoId: 'wizard-test-1683099191232',
+    },
+  };
+
+  var source = {
+    title: 'test',
+    dash: 'https://d3gb5yifoa4dm4.cloudfront.net/65fb6cc8-b679-4712-80d7-adcb4f1e2c1b/stream.mpd',
+		drm: {
+      widevine: {},
     },
   };
 
