@@ -24,6 +24,9 @@
 <script type="text/javascript">
   var conf = {
     key: 'ff76a5f5-02cf-4b31-908d-d7ec9de21e44',
+    cast: {
+      enable: true
+    },
     analytics: {
       key: '3fb4f675-9b4d-45cd-adb8-8941fcf74814',
       title: 'Art of Motion',
@@ -33,9 +36,14 @@
 
   var source = {
     title: 'Art of Motion',
-    dash: 'https://cdn.bitmovin.com/content/assets/art-of-motion_drm/mpds/11331.mpd',
+    hls: 'https://streams.bitmovin.com/ch8gb0s25ve3kf988mpg/manifest.m3u8',
 		drm: {
-      widevine: {},
+      widevine: {
+        LA_URL: 'https://cwip-shaka-proxy.appspot.com/no_auth'
+      },
+      playready: {
+        LA_URL: 'https://test.playready.microsoft.com/service/rightsmanager.asmx?PlayRight=1&ContentKey=EAtsIJQPd5pFiRUrV9Layw=='
+      }
     },
   };
 
